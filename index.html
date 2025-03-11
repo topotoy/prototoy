@@ -75,6 +75,10 @@
     canvas: (function () {
       var canvas = document.querySelector("#canvas");
       canvas.addEventListener("webglcontextlost", function (e) { alert("WebGL context lost. Please reload the page."); e.preventDefault(); }, false);
+      var gl = canvas.getContext("webgl", { alpha: false });
+      if (!gl) {
+        alert("Failed to initialize WebGL.");
+      }
       return canvas;
     })(),
     locateFile: function (path, prefix) {
@@ -89,6 +93,6 @@
   function webex_out(op, d0, d1, d2) { webex_is_alive = true; }
 </script>
 
-<script src="./prototoy-59079.js" type="text/javascript"></script>
+<script src="./prototoy-59083.js" type="text/javascript"></script>
 
 </html>
