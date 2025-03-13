@@ -75,17 +75,6 @@
     canvas: (function () {
       var canvas = document.querySelector("#canvas");
       canvas.addEventListener("webglcontextlost", function (e) { alert("WebGL context lost. Please reload the page."); e.preventDefault(); }, false);
-      // Override WebGL context creation
-      canvas.getContext = (function (origFn) {
-        return function (contextType, attributes) {
-          if (contextType === "webgl" || contextType === "experimental-webgl") {
-            attributes = attributes || {};
-            attributes.alpha = false;               // Disable transparency
-            attributes.premultipliedAlpha = false;  // Disable premultiplied alpha
-          }
-          return origFn.call(this, contextType, attributes);
-        };
-      })(canvas.getContext);
       return canvas;
     })(),
     locateFile: function (path, prefix) {
@@ -93,13 +82,16 @@
       if (path.endsWith(".data")) { return ("./" + path); }
       return (prefix + path);
     },
-    onRuntimeInitialized: function () { }
+    onRuntimeInitialized: function () { },
+    contextAttributes: {
+      premultipliedAlpha: false
+    }
   };
   var webex_is_alive = false;
   function webex_in(op, d0, d1, d2) { Module.ccall("webex_in", null, ["string", "string", "string", "string"], [op, d0, d1, d2]); }
   function webex_out(op, d0, d1, d2) { webex_is_alive = true; }
 </script>
 
-<script src="./prototoy-59134.js" type="text/javascript"></script>
+<script src="./prototoy-59136.js" type="text/javascript"></script>
 
 </html>
