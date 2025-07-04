@@ -1,41 +1,41 @@
 body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 50%), url('favicon.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 50%), url('favicon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 canvas {
-  width: 800px;
-  height: 600px;
-  background-color: #000;
-  border: 0;
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+    border: 0;
 }
 
 .container {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
 
 a {
-  color: cyan;
-  text-decoration: none;
+    color: cyan;
+    text-decoration: none;
 }
 
-a:visited {
-  color: cyan;
-  text-decoration: none;
-}
+    a:visited {
+        color: cyan;
+        text-decoration: none;
+    }
 
-a:hover {
-  color: cyan;
-  text-decoration: underline;
-}
+    a:hover {
+        color: cyan;
+        text-decoration: underline;
+    }
